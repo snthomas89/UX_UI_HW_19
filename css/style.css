@@ -1,0 +1,186 @@
+/*Global Properties*/
+body {
+    font-family: 'Dosis', sans-serif;
+    font-size: 14px;
+    color: #707070;
+    background-color: #f0f0f0;
+}
+
+/*Header*/
+.inline-block {
+    display: inline;
+    vertical-align: top;
+}
+.logo {
+    width: 23%;
+    padding: 1%;
+    text-align: left;
+}
+.navigation {
+    background-color: #b2cdd6;
+    margin-bottom: 30px;
+}
+ul {
+    margin-left: 0px;
+    list-style-type: none;
+    color: #435c73;
+}
+.links {
+    float: right;
+    padding: 0px 140px;
+    font-weight: bold;
+}
+li {
+    padding: 25px;
+}
+
+/*Body and Content*/
+.mainGrid {
+    display: grid;
+    margin: 0px 140px;
+    grid-template-rows: 90% 10%;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 
+    "img personalStatement"
+    "img resumeButton";
+}
+#headshot {
+    grid-area: img;
+}
+#statement {
+    grid-area: personalStatement;
+    text-align: right;
+}
+#download {
+    grid-area: resumeButton;
+    text-align: right;
+}
+button {
+    background-color: #b2cdd6;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    font-family: 'Dosis', sans-serif;
+}
+
+.mainGridArea{
+   padding: 0px 5%;
+}
+h1 {
+    font-family: 'Liu Jian Mao Cao', cursive;
+    font-size: 50px;
+    text-align: right;
+    margin-right: 180px;
+}
+#name {
+    margin-right: 0px;
+}
+
+h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+}
+h3{ 
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Skills Section coded with CSS Flex */
+.flexContainer {
+    display: flex;
+    margin: 140px;
+}
+
+.flexContainer div {
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* Projects Section coded with CSS Grid */
+.workGrid {
+    display: grid;
+    margin: 0px 140px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 250px 250px 250px;
+    grid-template-areas: 
+        "projImg1 projDesc1 projDesc1 projDesc1"
+        "projDesc2 projDesc2 projDesc2 projImg2"
+        "projImg3 projDesc3 projDesc3 projDesc3"
+    ;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+#projImg1 {
+    grid-area: projImg1;
+}
+#projDesc1 {
+    grid-area: projDesc1;
+}
+#projImg2 {
+    grid-area: projImg2;
+}
+#projDesc2 {
+    grid-area: projDesc2;
+}
+#projImg3 {
+    grid-area: projImg3;
+}
+#projDesc3 {
+    grid-area: projDesc3;
+    padding-top: 0px;
+}
+
+.myWork img {
+    width: 100%;
+    align-items: center;
+}
+.workGrid div {
+
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .mainGrid {
+        display: grid;
+        justify-items: center; 
+        margin: 0 auto;
+        grid-template-rows: 57% 40% 10%;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "img"
+        "personalStatement"
+        "resumeButton";
+    }
+    #statement {
+        margin: 15px;
+    }
+    .links {
+        display: none;
+    }
+    .flexContainer {
+        flex-direction: column;
+        margin: 0px;
+    }
+    
+    h1{
+        margin-right: 6%;
+    }
+    .workGrid {
+        display: grid;
+        margin: 0px;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 32% 32% 35%;
+        grid-template-areas: 
+            "projImg1 projDesc1 projDesc1 projDesc1"
+            "projDesc2 projDesc2 projDesc2 projImg2"
+            "projImg3 projDesc3 projDesc3 projDesc3"
+        ;
+        padding: 0px;    
+    }
+}
