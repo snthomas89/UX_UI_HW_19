@@ -4,6 +4,7 @@ body {
     font-size: 14px;
     color: #707070;
     background-color: #f0f0f0;
+    margin: 0px;
 }
 
 /*Header*/
@@ -18,8 +19,9 @@ body {
 }
 .navigation {
     background-color: #b2cdd6;
-    margin-bottom: 30px;
-}
+    width: 100%;
+    position: fixed;
+} 
 ul {
     margin-left: 0px;
     list-style-type: none;
@@ -28,13 +30,51 @@ ul {
 .links {
     float: right;
     padding: 0px 140px;
-    font-weight: bold;
+    font-weight: 600;
+}
+ul li.active{
+    color: #f0dccd;
+    transition-delay: 0.25s;
 }
 li {
     padding: 25px;
 }
+/* Navbar Interaction */
+#slide {
+    position: absolute;
+    width: 43px;
+    top: 0;
+    background: #435c73;
+    z-index: -1;
+    transition: 0.5s;
+    opacity: 0;
+}
+ul li:nth-child(1).active ~ #slide
+{
+    right: 413px;
+    opacity: 1;
+}
+ul li:nth-child(2).active ~ #slide
+{
+    right: 330px;
+    opacity: 1;
+}
+ul li:nth-child(3).active ~ #slide
+{
+    right: 240px;
+    opacity: 1;
+}
+ul li:nth-child(4).active ~ #slide
+{
+    right: 140px;
+    opacity: 1;
+}
+
 
 /*Body and Content*/
+section {
+    padding-top: 5%;
+}
 .mainGrid {
     display: grid;
     margin: 0px 140px;
@@ -65,6 +105,7 @@ button {
 
 .mainGridArea{
    padding: 0px 5%;
+   margin-top: 5%;
 }
 h1 {
     font-family: 'Liu Jian Mao Cao', cursive;
@@ -112,7 +153,7 @@ h3{
     ;
     justify-items: center;
     align-items: center;
-    border: 1px solid black;
+    
 }
 
 #projImg1 {
@@ -139,10 +180,18 @@ h3{
     width: 100%;
     align-items: center;
 }
+#row{
+    background-color: #dddddd;
+    width: 100%;
+}
 .workGrid div {
-
     padding: 20px;
     margin-top: 20px;
+}
+.myWork button{
+    width: 50px;
+    height: 50px;
+    align-items: center;
 }
 
 @media only screen and (max-width: 600px) {

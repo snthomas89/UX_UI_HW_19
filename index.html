@@ -10,14 +10,15 @@
 <body>
     <header class="navigation">
         <div class="inline-block logo">
-            <img src="images/logo.png" width="50px">
+            <img src="images/logo.png" width="50px" onclick="location.href='#';">
         </div>
         <div class="inline-block links">
             <ul>
                 <li class="inline-block">About</li>
-                <li class="inline-block">Skills</li>
-                <li class="inline-block">Projects</li>
-                <li class="inline-block">Get In Touch</li>
+                <li class="inline-block" onclick="location.href='#mySkills';">Skills</li>
+                <li class="inline-block" onclick="location.href='#myWork';">Projects</li>
+                <li class="inline-block">Contact</li>
+                <li class="inline-block" id="slide"></li>
             </ul>
         </div>
     </header>
@@ -34,11 +35,11 @@
                 <p>Although I love to make things aesthetically pleasing, I lean more towards UX than UI. I recently 
                 started my design career, currently working on redesigning software development request forms for General Motors.</p>
             </div>
-            <div class="mainGridArea" id="download">
+            <div id="download">
                 <button>Download Resume</button>
             </div>
     </section>
-    <section class="mySkills">
+    <section class="mySkills" id="mySkills">
         <h1>My Skills</h1>
         <div class="flexContainer">
             <div>
@@ -58,17 +59,17 @@
             </div>
         </div>
     </section>
-    <section class="myWork">
+    <section class="myWork" id="myWork">
         <h1>Projects</h1>
         <div class="workGrid">
-            <div id="projImg1">
-                <img src="images/getgreen.png">
-            </div>
-            <div id="projDesc1">
-                <h4>Mobile App Design</h4>
-                <p>Completing the UX Design process for a mobile app that offers rewards for being “green,” i.e. utilizing reusable food and drink items at local eateries. </p>
-                <button>View Project</button>
-            </div>
+                <div id="projImg1">
+                    <img src="images/getgreen.png">  
+                </div>
+                <div id="projDesc1">
+                    <h4>Mobile App Design</h4>
+                    <p>Completing the UX Design process for a mobile app that offers rewards for being “green,” i.e. utilizing reusable food and drink items at local eateries. </p>
+                    <button>View Project</button>
+                </div>
             <div id="projDesc2">
                 <h4>Nonprofit Website Redesign</h4>
                 <p>A UI redesign of metro Atlanta-based organization SafeRide, that transports customers and their cars to a desired destination. The goal was to make the site modern, clean, and consistent, and also do a bit of rebranding with a new color scheme and typography choices.</p>
@@ -90,5 +91,8 @@
         </div>
         <h3>View All Projects</h3>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
