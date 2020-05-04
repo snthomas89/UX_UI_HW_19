@@ -24,12 +24,13 @@
     </header>
     <section class="mainGrid">
             <div class="mainGridArea" id="headshot">
-                <img src="images/ShelbyHeadshot.jpg" width="400px">
+                <img src="images/ShelbyHeadshot.jpg" width="100%"> 
+                <!-- changed from pixel value to percentage to resize as screen size changes -->
             </div>
             <div class="mainGridArea" id="statement">
                 <h1 id="name">Shelby N Thomas</h1>
                 <h2>UX Designer, leaving things a little better than I found them.</h2>
-                <p>Design combines analytics, logic, and artistry - it’s creativity with boundaries. I’m fascinated by the human mind, especially
+                <p>User experience design combines analytics, logic, and artistry - it’s creativity with boundaries. I’m fascinated by the human mind, especially
                 when it comes to interacting with technology. I love to understand what draws us in, what pushes us away, and what keeps us 
                 coming back for more.</p>
                 <p>Although I love to make things aesthetically pleasing, I lean more towards UX than UI. I recently 
@@ -45,7 +46,7 @@
             <div>
                 <img src="images/004-research.png">
                 <h3>UX Research, Testing, Analysis</h3>
-                <p>I love to define the problem and solution with a current product or for a future one. Analyzing qualitative data and drawing conclusions from interviews, surveys and testing is where I shine.</p>
+                <p>I love to identify problems and devise solutions for current and future products. Analyzing qualitative data and drawing conclusions from interviews, surveys and testing is where I shine.</p>
             </div>
             <div>
                 <img src="images/002-computer.png">
@@ -89,7 +90,7 @@
                 <button>View Project</button>
             </div>
         </div>
-        <h3>View All Projects</h3>
+        <button id="viewAll">View All Projects</button>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
